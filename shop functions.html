@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Details</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 100px;
+        }
+
+        p {
+            margin-bottom: 40px;
+            font-size:25px;
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+            border-radius: 10px; 
+            overflow: hidden; 
+            border: 2px solid black; 
+            margin: 10px; 
+            width: calc(33.33% - 20px); 
+            box-sizing: border-box;
+            padding-top: calc(33.33% - 20px); 
+        }
+
+        .image-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            transition: filter 0.25s; 
+        }
+
+        .image-container:hover img {
+            filter: brightness(0); 
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0; 
+            transition: opacity 0.5s; 
+            background-color: rgba(0, 0, 0, 0.5); 
+            color: black;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        .image-container:hover .text-overlay, .image-container:hover .hyperlink-box {
+            opacity: 1; 
+        }
+
+        .text-overlay {
+            background-color: rgba(255, 255, 255, 0.8); 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .hyperlink-box {
+            position: absolute;
+            top: 88%;
+            right: 2%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 2% 5%;
+            border-radius: 5px;
+            cursor: pointer;
+            opacity: 0; 
+            transition: opacity 0.25s; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Shop</h1>
+        <p>When it comes to our furry companions, getting the right pet accessories is key to their happiness and well-being. 
+            From cozy beds to sturdy leashes and engaging toys, these items aren't just luxuries; they're essentials for a fulfilling life for your pet. 
+            Providing them with comfy resting spots, safe gear for outdoor adventures, and toys that stimulate their minds and bodies shows them how much 
+            they mean to us. It's not just about spoiling them; it's about ensuring they live their best, happiest lives by our side. 
+            After all, our pets are more than just animals; they're cherished members of our family.</p>
+    </div>
+    <div style="display: flex; flex-wrap: wrap;">
+        <!-- Top  -->
+        <div class="image-container">
+            <img id="image1" src="C:\xampp\htdocs\Assignment\Stuff\Images\Cat1.jpg" alt="Image 1">
+            <div class="text-overlay">
+                <p>Spoil your feline friend with a luxurious, plush bed that comforts their catnaps.</p>
+            </div>
+            <a class="hyperlink-box" href="https://shopee.com.my/petloverparadise" target="_blank">Explore</a>
+        </div>
+        <div class="image-container">
+            <img id="image2" src="C:\xampp\htdocs\Assignment\Stuff\Images\Cat2.jpeg" alt="Image 2">
+            <div class="text-overlay">
+                <p>Keep your cat entertained and on the go with a stylish and practical cat bag for comfortable travel.</p>
+            </div>
+            <a class="hyperlink-box" href="https://shopee.com.my/petloverparadise" target="_blank">Explore</a>
+        </div>
+        <div class="image-container">
+            <img id="image3" src="C:\xampp\htdocs\Assignment\Stuff\Images\cat3.jpeg" alt="Image 3">
+            <div class="text-overlay">
+                <p>Ensure your kitty's safety and style with a fashionable collar featuring reflective details for nighttime visibility.</p>
+            </div>
+            <a class="hyperlink-box" href="https://shopee.com.my/petloverparadise" target="_blank">Explore</a>
+        </div>
+        <!-- Bottom  -->
+        <div class="image-container">
+            <img id="image4" src="C:\xampp\htdocs\Assignment\Stuff\Images\cat4.jpeg" alt="Image 4">
+            <div class="text-overlay">
+                <p>Give your curious cat a cozy retreat with an enclosed cat condo that provides a comfortable space to relax and play.</p>
+            </div>
+            <a class="hyperlink-box" href="https://shopee.com.my/petloverparadise" target="_blank">Explore</a>
+        </div>
+        <div class="image-container">
+            <img id="image5" src="C:\xampp\htdocs\Assignment\Stuff\Images\Dog1.jpg" alt="Image 5">
+            <div class="text-overlay">
+                <p>Treat your loyal canine companion to a comfortable and stylish bed that ensures a restful sleep every night.</p>
+            </div>
+            <a class="hyperlink-box" href="https://shopee.com.my/petloverparadise" target="_blank">Explore</a>
+        </div>
+        <div class="image-container">
+            <img id="image6" src="C:\xampp\htdocs\Assignment\Stuff\Images\Dog2.jpeg" alt="Image 6">
+            <div class="text-overlay">
+                <p>Keep your dog safe and secure on walks with a durable leash designed for both practicality and style.</p>
+            </div>
+            <a class="hyperlink-box" href="https://shopee.com.my/petloverparadise" target="_blank">Explore</a>
+        </div>
+    </div>
+</body>
+</html>
